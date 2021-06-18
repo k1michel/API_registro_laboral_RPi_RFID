@@ -23,3 +23,7 @@ class Conexion:
 
     def busqueda_dia(self,dia) -> list:
         return [dict(registro) for registro in self.empleados.all() if dict(registro)["dia"] == dia]
+    
+    def busqueda_completa(self,nombre,ano,mes,dia) -> list:
+        if nombre:
+            
